@@ -1,0 +1,166 @@
+:root {
+    --primary-color: #007bff;
+    --hover-color: #0056b3;
+    --text-color: #000;
+    --background-color: #ffea00;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    width: 275px;
+    margin: 20px auto;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.vam-actual {
+    font-size: 2.25rem;
+    margin: 20px 0;
+}
+
+#vamValue {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: var(--hover-color);
+}
+
+.hidden {
+    display: none;
+}
+
+.form-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    padding: 8px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.time-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px auto;
+    max-width: 200px;
+}
+
+.time-inputs .form-input {
+    width: 30%;
+    padding: 8px;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.time-labels label {
+    width: 30%;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+/* Estilos para la tabla */
+.vam-table-container {
+    width: 100%;
+    overflow-x: auto; /* Permite scroll horizontal si es necesario */
+    text-align: center;
+}
+
+.vam-table {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.vam-table th,
+.vam-table td {
+    border: 1px solid black;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+
+.vam-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.vam-table tr:nth-child(1) {
+    background-color: yellow;
+}
+
+.vam-table tr:nth-child(11) {
+    background-color: lightgreen;
+}
+
+.vam-table tr:nth-child(24) {
+    background-color: orange;
+}
+
+.vam-table tr:nth-child(37) {
+    background-color: lightblue;
+}
+
+.vam-table tr:nth-child(47) {
+    background-color: lightcoral;
+}

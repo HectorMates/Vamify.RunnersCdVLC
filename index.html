@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App VAM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div class="container">
+        <img src="images/logorunnerscdvlc.png" alt="Logo" class="logo">
+        <p class="description">La Velocidad Aeróbica Máxima (VAM) es la velocidad de carrera alcanzada por un atleta cuando su consumo de oxígeno es máximo (VO2MAX).<br>
+    <br>
+    Puede estar comprendida entre 8 y 25 km/h y depende de una parte de factores genéticos y otro del nivel de entrenamiento del atleta.</p>
+        <div class="vam-actual">VAM Actual: <span id="vamValue"><br>19</span></div>
 
+        <button class="button" onclick="toggleSection('vamSection')">Obtener VAM Orientativo</button>
+        <div id="vamSection" class="form-section hidden">
+            <label for="distance">Distancia:</label>
+            <input type="number" id="distance" placeholder="(metros)" class="form-input">
+            
+            <div class="time-labels">
+                <label for="hours">Horas:</label>
+                <label for="minutes">Minutos:</label>
+                <label for="seconds">Segundos:</label>
+            </div>
+            
+            <div class="time-inputs">
+                <input type="number" id="hours" placeholder="HH" class="form-input">
+                <input type="number" id="minutes" placeholder="MM" class="form-input">
+                <input type="number" id="seconds" placeholder="SS" class="form-input">
+            </div>
+
+            <button class="button" style="background-color: green;" onclick="calculateVAM()">Calcular VAM</button>
+        </div>
+
+        <button class="button" onclick="toggleSection('ritmoSection')">Generar Tabla de Ritmos</button>
+        <div id="ritmoSection" class="form-section hidden">
+            <input type="number" id="userVAM" placeholder="Introduce tu VAM" class="form-input">
+            <button class="button" style="background-color: green;" onclick="generateTable()">Calcular Tabla</button>
+            <div id="tableContainer"></div>
+        </div>
+
+        <button class="button" onclick="toggleSection('miTablaSection'); generateTable(true)">Ir a Mi Tabla</button>     
+        <div id="miTablaSection" class="form-section hidden">
+            <div id="miTableContainer"></div>
+        </div>
+
+        <button class="button" onclick="toggleSection('infoSection')">Información RCDV</button>
+        <div style="text-align: center;">
+            <div id="infoSection" class="form-section hidden">
+            <img src="images/Palau.png">
+            <img src="images/Pistas.png">
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/runnersciutatdevalencia/" target="_blank"><img src="images/facebook_icon.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/runnerscdvlc/" target="_blank"><img src="images/instagram_icon.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/channel/UCQG86xqOrkiCMxLMhDFfu7A/" target="_blank"><img src="images/youtube_icon.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
