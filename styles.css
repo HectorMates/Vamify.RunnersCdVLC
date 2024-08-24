@@ -2,7 +2,7 @@
     --primary-color: #007bff;
     --hover-color: #0056b3;
     --text-color: #000;
-    --background-color: #ffea00;
+    --background-color: #fdee00;
 }
 
 body {
@@ -114,14 +114,14 @@ body {
 }
 
 .social-icons img {
-    width: 40px;
-    margin: 0 10px;
+    width: 50px;
+    margin: 0 15px;
 }
 
 /* Estilos para la tabla */
 .vam-table-container {
     width: 100%;
-    overflow-x: auto; /* Permite scroll horizontal si es necesario */
+    overflow-x: center; /* Permite scroll horizontal si es necesario */
     text-align: center;
 }
 
@@ -136,13 +136,15 @@ body {
 .vam-table th,
 .vam-table td {
     border: 1px solid black;
-    padding: 2px 5px;
+    padding: 2px 3px;
     white-space: nowrap;
+    font-size: 0.85rem;
 }
 
 .vam-table th {
     background-color: #f0f0f0;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .vam-table tr:nth-child(1) {
