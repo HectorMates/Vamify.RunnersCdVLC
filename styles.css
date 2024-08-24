@@ -127,7 +127,7 @@ body {
 
 .vam-table {
     width: 100%;
-    max-width: 100%;
+    max-width: 370px;
     margin: 0 auto;
     border-collapse: collapse;
     text-align: center;
